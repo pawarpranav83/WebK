@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffffff;
+  font-size: 100%;
+}
+
+.name {
+  font-family: "Poppins", sans-serif;
+  /* letter-spacing: 1px; */
+  font-size: 1.6em;
+  /* z-index: 1; */
+  background: linear-gradient(
+    90deg,
+    #ffc700 -2.08%,
+    #987807 99.99%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+  font-weight: 600;
+  display: inline-block;
+  position: relative;
+  left: 2vw;
+}
+
+/* .box1 {
+    display: inline-block;
+    background: black;
+    height: 100px;
+    width: 225px;
+    display: flex;
+    align-items: center;
+} 
+*/
+
+.navbar {
+  height: 90px;
+  width: 100%;
+  /* margin: 3.25vh auto auto auto; */
+  display: flex;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  /* border: 0.001px inset black; */
+  box-shadow: 0.5px 0.5px 7px -1px rgba(0, 0, 0, 0.324);
+  /* display: inline; */
+}
+
+.navContents {
+  position: absolute;
+  height: 100px;
+  left: 43vw;
+  top: 27px;
+  width: 50%;
+  min-width: 540px;
+  /* transform: scale(0.9); */
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+}
+
+.location {
+  position: relative;
+  left: 70px;
+}
+
+.address {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3em;
+  color: black;
+  float: right;
+  font-size: 16px;
+  font-weight: 580;
+  /* line-height: 19px; */
+  position: relative;
+  left: 10px;
+  top: 5px;
+}
+
+.imgLocation {
+  width: 27.8px;
+  height: 30px;
+}
+
+.cart {
+  /* float: right; */
+  width: 30px;
+  height: 30px;
+  position: relative;
+  left: 131px;
+}
+
+.account {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  left: 180px;
+}
+
+.search {
+  width: 25vw;
+  position: relative;
+  left: 250px;
+  height: 38px;
+  border-style: solid;
+  border-radius: 100px;
+  border-width: 1px;
+}
+
+.searchIcon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 8px;
+  left: 23vw;
+}
+
+.banner {
+  height: 302px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 30vw 70vw;
+  grid-template-rows: 100vh;
+}

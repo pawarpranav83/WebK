@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodShades</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/res_overview.css">
+    <style>
+        .res-card {
+            /* ------------------- */
+
+
+            /* ----------------------------------------------------------- */
+
+
+            width: 20vw;
+            /* border: 2px solid #1d1616; */
+
+            display: flex;
+            flex-direction: column;
+            font-size: 2vh;
+            font-family: 'Noto Sans',
+                sans-serif;
+            font-weight: bold;
+            border-radius: 4%;
+
+        }
+
+
+        .res-img img {
+            height: 26vh;
+            width: 20vw;
+            border-radius: 4%;
+
+        }
+
+        .res-desc {
+            display: flex;
+            /* border: 2px solid black; */
+            justify-content: space-between;
+            padding: 1px;
+
+        }
+
+        .res-footer {
+            display: flex;
+            /* border: 2px solid black; */
+            position: relative;
+            justify-content: space-between;
+            font-weight: 600;
+            top: 2%;
+            color: black;
+        }
+
+        .res-name {
+            position: relative;
+            font-size: 2.3vh;
+            left: 2.5%;
+        }
+
+        .res-type {
+            position: relative;
+            right: 3%;
+            color: #6a6262;
+            top: 9%;
+        }
+
+        .res-rating {
+            border: 2px solid #21d037;
+            border-radius: 12%;
+            position: relative;
+            left: 7%;
+            color: white;
+            background-color: #3cbd3c;
+        }
+
+        .res-category {
+
+            position: relative;
+            right: 6%;
+        }
+
+        .res_container {
+
+            position: absolute;
+            /* border: 2px solid black; */
+            width: 80vw;
+            top: 52vh;
+            left: 10vw;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10%;
+
+
+
+        }
+
+        .sortBar {
+            display: flex;
+            border: 2px px solid #000000;
+            border-radius: 0%;
+            height: 6vh;
+            width: 80vw;
+            position: absolute;
+            top: 42%;
+            background-color: #f5efef;
+            left: 10%;
+            justify-content: space-evenly;
+            font-size: 2.3vh;
+            align-items: center;
+
+
+
+        }
+
+        .sortBar a {
+            text-decoration: none;
+            color: black;
+        }
+
+
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #ffffff;
+            font-size: 100%;
+        }
+
+        .name {
+            font-family: "Poppins", sans-serif;
+            /* letter-spacing: 1px; */
+            font-size: 1.6em;
+            /* z-index: 1; */
+            background: linear-gradient(90deg,
+                    #ffc700 -2.08%,
+                    #987807 99.99%,
+                    rgba(0, 0, 0, 0) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            /* text-fill-color: transparent; */
+            font-weight: 600;
+            display: inline-block;
+            position: relative;
+            left: 2vw;
+        }
+
+        /* .box1 {
+display: inline-block;
+background: black;
+height: 100px;
+width: 225px;
+display: flex;
+align-items: center;
+} 
+*/
+
+        .navbar {
+            height: 90px;
+            width: 100%;
+            /* margin: 3.25vh auto auto auto; */
+            display: flex;
+            align-items: center;
+            background: rgb(255, 255, 255);
+            /* border: 0.001px inset black; */
+            box-shadow: 0.5px 0.5px 7px -1px rgba(0, 0, 0, 0.324);
+            /* display: inline; */
+        }
+
+        .navContents {
+            position: absolute;
+            height: 100px;
+            left: 43vw;
+            top: 27px;
+            width: 50%;
+            min-width: 540px;
+            /* transform: scale(0.9); */
+            display: flex;
+            flex-direction: row;
+            /* justify-content: space-between; */
+        }
+
+        .location {
+            position: relative;
+            left: 70px;
+        }
+
+        .address {
+            font-family: "Poppins", sans-serif;
+            font-size: 1.3em;
+            color: black;
+            float: right;
+            font-size: 16px;
+            font-weight: 580;
+            /* line-height: 19px; */
+            position: relative;
+            left: 10px;
+            top: 5px;
+        }
+
+        .imgLocation {
+            width: 27.8px;
+            height: 30px;
+        }
+
+        .cart {
+            /* float: right; */
+            width: 30px;
+            height: 30px;
+            position: relative;
+            left: 131px;
+        }
+
+        .account {
+            width: 35px;
+            height: 35px;
+            position: relative;
+            left: 180px;
+        }
+
+        .search {
+            width: 25vw;
+            position: relative;
+            left: 250px;
+            height: 38px;
+            border-style: solid;
+            border-radius: 100px;
+            border-width: 1px;
+        }
+
+        .searchIcon {
+            width: 20px;
+            height: 20px;
+            position: relative;
+            top: 8px;
+            left: 23vw;
+        }
+
+        .banner {
+            height: 302px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: 30vw 70vw;
+            grid-template-rows: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <p class="name">FoodShades</p>
+        <div class="navContents">
+            <div class="location">
+                <img src="../frontend/images/location.png" alt="Location" class="imgLocation">
+                <p class="address">Building, City</p>
+            </div>
+            <img src="../frontend/images/basket.jpg" alt="Cart" class="cart">
+            <img src="../frontend/images/account.png" alt="Account" class="account">
+            <div class="search">
+                <img src="../frontend/images/search.png" alt="" class="searchIcon">
+            </div>
+        </div>
+    </div>z
+    <div class="banner">
+        <img src="../frontend/images/banner1x.png" alt="banner" class="banner1">
+        <img src="../frontend/images/banner2x.png" alt="banner" class="banner2">
+    </div>
+    <div class="main"></div>
+
+    <div class="sortBar">
+        <div class="el" id="el1"><a href="/">All</a></div>
+        <div class="el" id="el2"><a href="/VegOnly">Veg Only</a></div>
+        <div class="el" id="el3"><a href="/ByRating">Rating</a></div>
+        <div class="el" id="el4"><a href="/ByDeliveryTime">Delivery Time</a></div>
+        <div class="el" id="el5"><a href="/"></a>Category</div>
+
+    </div>
+
+
+
+
+
+    <div class="res_container">
+
+        {%res-cards%}
+
+    </div>
+
+
+</body>
+
+</html>
+<!-- * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffffff;
+    font-size: 100%;
+}
+
+.name {
+    font-family: "Poppins", sans-serif;
+    /* letter-spacing: 1px; */
+    font-size: 1.6em;
+    /* z-index: 1; */
+    background: linear-gradient(90deg,
+            #ffc700 -2.08%,
+            #987807 99.99%,
+            rgba(0, 0, 0, 0) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* text-fill-color: transparent; */
+    font-weight: 600;
+    display: inline-block;
+    position: relative;
+    left: 2vw;
+}
+
+/* .box1 {
+display: inline-block;
+background: black;
+height: 100px;
+width: 225px;
+display: flex;
+align-items: center;
+} 
+*/
+
+.navbar {
+    height: 90px;
+    width: 100%;
+    /* margin: 3.25vh auto auto auto; */
+    display: flex;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    /* border: 0.001px inset black; */
+    box-shadow: 0.5px 0.5px 7px -1px rgba(0, 0, 0, 0.324);
+    /* display: inline; */
+}
+
+.navContents {
+    position: absolute;
+    height: 100px;
+    left: 43vw;
+    top: 27px;
+    width: 50%;
+    min-width: 540px;
+    /* transform: scale(0.9); */
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+}
+
+.location {
+    position: relative;
+    left: 70px;
+}
+
+.address {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3em;
+    color: black;
+    float: right;
+    font-size: 16px;
+    font-weight: 580;
+    /* line-height: 19px; */
+    position: relative;
+    left: 10px;
+    top: 5px;
+}
+
+.imgLocation {
+    width: 27.8px;
+    height: 30px;
+}
+
+.cart {
+    /* float: right; */
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: 131px;
+}
+
+.account {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    left: 180px;
+}
+
+.search {
+    width: 25vw;
+    position: relative;
+    left: 250px;
+    height: 38px;
+    border-style: solid;
+    border-radius: 100px;
+    border-width: 1px;
+}
+
+.searchIcon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 8px;
+    left: 23vw;
+}
+
+.banner {
+    height: 302px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 30vw 70vw;
+    grid-template-rows: 100vh;
+} -->

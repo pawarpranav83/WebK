@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgba(20, 20, 20, 1);
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(20, 20, 20, 1);
+}
+
+.signUp {
+  background-color: rgba(20, 20, 20, 1);
+  color: white;
+  border-width: 3px;
+  border-color: white;
+  border-style: solid;
+  border-radius: 50px;
+  font-family: "Lucida Bright";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+#log1 {
+  padding: 18px 27px 18px 25px;
+  position: relative;
+  left: 80vw;
+  top: 36px;
+}
+
+#arrow {
+  position: relative;
+  top: 3px;
+  left: 5px;
+}
+
+#log2 {
+  padding: 18px 30px;
+  position: relative;
+  left: 82vw;
+  top: 36px;
+}
+
+.name {
+  font-family: "Libre Baskerville";
+  font-style: normal;
+  color: white;
+  width: 50vw;
+}
+
+#name1 {
+  position: relative;
+  font-weight: 700;
+  font-size: 170px;
+  top: 270px;
+  left: 28vw;
+}
+
+#name2 {
+  position: relative;
+  font-size: 40px;
+  top: 280px;
+  font-weight: 600;
+  left: 38vw;
+  line-height: 47px;
+}
+
+.options {
+  background-color: rgba(237, 237, 237, 1);
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* margin-top: 120px; */
+  padding-top: 120px;
+}
+
+.box1 {
+  position: relative;
+  left: 3vw;
+}
+
+.box2 {
+  position: relative;
+  right: 3vw;
+}
+
+.info1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  padding-top: 24px;
+}
+
+#info1a {
+  position: relative;
+  left: 3vw;
+}
+
+.info2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  text-decoration-line: underline;
+  padding-top: 5px;
+}
+
+#info1b {
+  position: relative;
+  right: 3vw;
+}
+
+.footer {
+  background-color: rgba(229, 228, 228, 1);
+  width: 100%;
+  height: 50vh;
+}
+
+.content {
+  position: relative;
+  left: 10vw;
+  width: 85vw;
+  top: 10vh;
+  display: flex;
+  flex-direction: row;
+}
+
+h1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+
+p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.legal {
+  position: relative;
+  left: 5vw;
+}
+
+.support {
+  position: relative;
+  left: 10vw;
+}
+
+.nameFooter {
+  font-family: "Libre Baskerville";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  position: relative;
+  left: 42vw;
+  bottom: 1vh;
+}
+
+.icons {
+    position: relative;
+    top: 18vh;
+    left: 32vw;
+}
+
+.mediaHandle {
+    padding-right: 30px;
+    
+}
